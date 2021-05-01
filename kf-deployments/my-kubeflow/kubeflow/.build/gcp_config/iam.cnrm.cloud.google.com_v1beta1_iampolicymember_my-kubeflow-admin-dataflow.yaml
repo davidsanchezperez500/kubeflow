@@ -1,0 +1,14 @@
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicyMember
+metadata:
+  labels:
+    kf-name: my-kubeflow
+  name: my-kubeflow-admin-dataflow
+  namespace: mlops-312413
+spec:
+  member: serviceAccount:my-kubeflow-admin@mlops-312413.iam.gserviceaccount.com
+  resourceRef:
+    apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
+    external: projects/mlops-312413
+    kind: Project
+  role: roles/dataflow.admin

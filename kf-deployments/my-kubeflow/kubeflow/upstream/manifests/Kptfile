@@ -1,0 +1,11 @@
+apiVersion: kpt.dev/v1alpha1
+kind: Kptfile
+metadata:
+  name: manifests
+upstream:
+  type: git
+  git:
+    commit: da561762dde5ef8e70ed27aa028b61711c1c4231
+    repo: https://github.com/kubeflow/manifests.git
+    directory: /
+    ref: v1.2.0

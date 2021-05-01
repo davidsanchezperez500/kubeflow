@@ -1,0 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: mlops-312413 # {"$kpt-set":"gcloud.core.project"}
+commonAnnotations:
+  # Annotation required by anthoscli
+  gke.io/cluster: "bootstrap://"
+resources:
+- enable-services.yaml
+- cluster.yaml
+- nodepool.yaml
